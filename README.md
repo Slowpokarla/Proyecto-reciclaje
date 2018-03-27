@@ -6,9 +6,9 @@ Los animales de todo el mundo ya no saben que hacer, sus hogares están plagados 
 
 ### Personajes
 
-** Oso polar * está enojadísimo por la cantidad de botellas de vidrio que tiene fuera de su iglú, un día fue a botar una al basurero y un paparazzi le sacó una foto con la botella en la mano, desde ese día que es reconocido en todo el mundo por auspiciar una marca de bebidas. Oso polar ya demandó a la empresa por usar su imagen y por no hacerse responsable del cúmulo de vidrios fuera de su hogar. Mientras espera el veredicto se dedica a reciclar.
+** Oso polar ** está enojadísimo por la cantidad de botellas de vidrio que tiene fuera de su iglú, un día fue a botar una al basurero y un paparazzi le sacó una foto con la botella en la mano, desde ese día que es reconocido en todo el mundo por auspiciar una marca de bebidas. Oso polar ya demandó a la empresa por usar su imagen y por no hacerse responsable del cúmulo de vidrios fuera de su hogar. Mientras espera el veredicto se dedica a reciclar.
 
-** Pingüino * era un gran consumidor de latas de atún. Fue tanto que llegó a acumular que empezó a hacer esculturas con los distintos tipos de latas como la torre de pisa, la estatua de la libertad y hasta el mismísimo David el desnudo se encuentra entre su famosa galería de arte. Ahora pingüino se dedica todos los días a reciclar sus latas de atún formando hermosas obras de arte.
+** Pingüino ** era un gran consumidor de latas de atún. Fue tanto que llegó a acumular que empezó a hacer esculturas con los distintos tipos de latas como la torre de pisa, la estatua de la libertad y hasta el mismísimo David el desnudo se encuentra entre su famosa galería de arte. Ahora pingüino se dedica todos los días a reciclar sus latas de atún formando hermosas obras de arte.
 
 ** Ave * esta preocupadísima por sus hijos, todos los días el más pequeño trae un plástico que se encuentra en el camino. Cada vez que termina de hacer el aseo en su hogar viene un ventarrón donde caen bolsas de plástico en toda su casa. Un día se le ocurrió utilizar ese plástico en hacer nuevos nidos, más calientitos y lavables. Ahora es la diseñadora y vendedora de nidos más famosa del sector, todos los días junto a sus hijos se dedican a reciclar todo el plástico que cae en su patio.
 
