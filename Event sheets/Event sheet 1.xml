@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-group description="" sid="231552286771115" title="teclado">
+            <sub-events>
+                <event-block sid="902545577012155">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="216466247482222" type="Keyboard">
+                            <param id="0" name="Key">40 (Down arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="609466886674890" type="Pinguino">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="856781229133562">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="442253216748400" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="558009670277073" type="Pinguino">
+                            <param id="0" name="Instance variable">recarga</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="182965549768383" type="Pinguino">
+                            <param id="0" name="Animation">&quot;derecha&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="710947830200893" type="Pinguino">
+                            <param id="0" name="Object">lata1</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">&quot;tirar&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="542509962505576" type="Pinguino">
+                            <param id="0" name="Instance variable">recarga</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="126084206832845" type="Pinguino">
+                            <param id="0" name="Duration">0.5</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;recarga&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="212671593148897">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="619040059029557" type="Keyboard">
+                            <param id="0" name="Key">37 (Left arrow)</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="395897336629115" type="Pinguino">
+                            <param id="0" name="Instance variable">recarga</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="902805090470909" type="Pinguino">
+                            <param id="0" name="Animation">&quot;izquierda&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="471211725999317" type="Pinguino">
+                            <param id="0" name="Object">lata2</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">&quot;tirar&quot;</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="115084728503662" type="lata2">
+                            <param id="0" name="Speed">-400</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="518832401899551" type="Pinguino">
+                            <param id="0" name="Instance variable">recarga</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="891049284632801" type="Pinguino">
+                            <param id="0" name="Duration">0.5</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;recarga&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="198256046386063">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="149829601410965" type="Keyboard">
+                            <param id="0" name="Key">38 (Up arrow)</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="179419858824999" type="Pinguino">
+                            <param id="0" name="Instance variable">recarga</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="233086375790452" type="Pinguino">
+                            <param id="0" name="Animation">&quot;espaldas&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="570867487393628" type="Pinguino">
+                            <param id="0" name="Object">lata3</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">&quot;tirar&quot;</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="592990963852480" type="lata3">
+                            <param id="0" name="Angle">-90</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="193947259476701" type="Pinguino">
+                            <param id="0" name="Instance variable">recarga</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="934274911983185" type="Pinguino">
+                            <param id="0" name="Duration">0.5</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;recarga&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment></comment>
+        <event-group description="" sid="493041655552619" title="Latas">
+            <sub-events>
+                <event-block sid="345251011682531">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="365660448046842" type="lata1">
+                            <param id="0" name="Object">escultura1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="100932802570041" type="escultura1">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">0.5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="552485696994967" type="lata1" />
+                        <action id="4" name="Set animation" sid="609452263689993" type="Pinguino">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="217638165552248">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="489929118882861" type="lata2">
+                            <param id="0" name="Object">escultura2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="555978345746977" type="escultura2">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">0.5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="196603518078838" type="lata2" />
+                        <action id="4" name="Set animation" sid="559147112766044" type="Pinguino">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="627654224274631">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="518247586173852" type="lata3">
+                            <param id="0" name="Object">escultura3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="786838602637478" type="escultura3">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">0.5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="365465639490638" type="lata3" />
+                        <action id="4" name="Set animation" sid="356630568790178" type="Pinguino">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="855872309479730">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="848236962675950" type="Pinguino">
+                    <param id="0" name="Tag">&quot;recarga&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="550766930954931" type="Pinguino">
+                    <param id="0" name="Instance variable">recarga</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

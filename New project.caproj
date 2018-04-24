@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>New project</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>2dqcftw14aekf</unique-id>
+    <saved-with-version>24400</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1024</width>
+        <height>640</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Pinguino" sid="800545214514265">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="recarga" sid="910594652404734" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Timer" sid="552507736019483">
+                    <behavior id="Timer" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="619313331606987" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501341" original-source="C:\Users\Dv4  5164\Desktop\construct\PROYECTO-RECICLAJE\pinguino_idle1_p.png">
+                        <collision-poly>
+                            <point x="0.2525" y="0.13941" />
+                            <point x="0.4925" y="0.0214477" />
+                            <point x="0.835" y="0.209115" />
+                            <point x="0.685" y="0.49866" />
+                            <point x="0.7625" y="0.670241" />
+                            <point x="0.7525" y="0.908847" />
+                            <point x="0.2725" y="0.930295" />
+                            <point x="0.035" y="0.656836" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501341" original-source="C:\Users\Dv4  5164\Desktop\construct\PROYECTO-RECICLAJE\pinguino_idle1.png">
+                        <collision-poly>
+                            <point x="0.2525" y="0.13941" />
+                            <point x="0.4925" y="0.0214477" />
+                            <point x="0.835" y="0.209115" />
+                            <point x="0.685" y="0.49866" />
+                            <point x="0.7625" y="0.670241" />
+                            <point x="0.7525" y="0.908847" />
+                            <point x="0.2725" y="0.930295" />
+                            <point x="0.035" y="0.656836" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501341" original-source="C:\Users\Dv4  5164\Desktop\construct\PROYECTO-RECICLAJE\pinguino_idle3.png">
+                        <collision-poly>
+                            <point x="0.2525" y="0.13941" />
+                            <point x="0.4925" y="0.0214477" />
+                            <point x="0.835" y="0.209115" />
+                            <point x="0.685" y="0.49866" />
+                            <point x="0.7625" y="0.670241" />
+                            <point x="0.7525" y="0.908847" />
+                            <point x="0.2725" y="0.930295" />
+                            <point x="0.035" y="0.656836" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="derecha" pingpong="0" repeatcount="1" repeatto="0" sid="385574726471777" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501341" original-source="C:\Users\Dv4  5164\Desktop\construct\PROYECTO-RECICLAJE\pinguino_spin1.png">
+                        <image-point name="tirar" x="0.79" y="0.608579" />
+                        <collision-poly>
+                            <point x="0.2525" y="0.13941" />
+                            <point x="0.4925" y="0.0214477" />
+                            <point x="0.835" y="0.209115" />
+                            <point x="0.685" y="0.49866" />
+                            <point x="0.7625" y="0.670241" />
+                            <point x="0.7525" y="0.908847" />
+                            <point x="0.2725" y="0.930295" />
+                            <point x="0.035" y="0.656836" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="izquierda" pingpong="0" repeatcount="1" repeatto="0" sid="589439460001501" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501341" original-source="C:\Users\Dv4  5164\Desktop\construct\PROYECTO-RECICLAJE\pinguino_spin3_preview.png">
+                        <image-point name="tirar" x="0.22" y="0.689008" />
+                        <collision-poly>
+                            <point x="0.2325" y="0.24933" />
+                            <point x="0.5" y="0.0723861" />
+                            <point x="0.7575" y="0.260054" />
+                            <point x="0.9325" y="0.49866" />
+                            <point x="0.7975" y="0.782842" />
+                            <point x="0.5" y="0.946381" />
+                            <point x="0.2325" y="0.75067" />
+                            <point x="0.3025" y="0.49866" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="espaldas" pingpong="0" repeatcount="1" repeatto="0" sid="605084868703421" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501341" original-source="C:\Users\Dv4  5164\Desktop\construct\PROYECTO-RECICLAJE\pinguino_spin2_preview.png">
+                        <image-point name="tirar" x="0.505" y="0.0563003" />
+                        <collision-poly>
+                            <point x="0.22" y="0.235925" />
+                            <point x="0.5" y="0.077748" />
+                            <point x="0.775" y="0.241287" />
+                            <point x="0.7225" y="0.49866" />
+                            <point x="0.805" y="0.790885" />
+                            <point x="0.5" y="0.946381" />
+                            <point x="0.1975" y="0.788204" />
+                            <point x="0.2825" y="0.49866" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Suelo" sid="500205890451176">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="958463223326014">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="861759814229385" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="lata1" sid="629321292346486">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="147194783773924">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="575143052216652" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501341" original-source="C:\Users\Dv4  5164\Desktop\construct\PROYECTO-RECICLAJE\lata1.png">
+                        <collision-poly>
+                            <point x="0.4175" y="0.260054" />
+                            <point x="0.6025" y="0.0402145" />
+                            <point x="0.8625" y="0.147453" />
+                            <point x="0.92" y="0.49866" />
+                            <point x="0.825" y="0.91689" />
+                            <point x="0.125" y="0.91689" />
+                            <point x="0.1325" y="0.603218" />
+                            <point x="0.555" y="0.565684" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="731811120992102">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Sprite" sid="664112989256934">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="805285975109643" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="lata2" sid="351268635198949">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="740672694173130">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="777018360353956" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501341" original-source="C:\Users\Dv4  5164\Desktop\construct\PROYECTO-RECICLAJE\lata2_preview.png">
+                        <collision-poly>
+                            <point x="0.4025" y="0.431635" />
+                            <point x="0.62" y="0.407507" />
+                            <point x="0.8825" y="0.49866" />
+                            <point x="0.82" y="0.806971" />
+                            <point x="0.5" y="0.831099" />
+                            <point x="0.1725" y="0.815013" />
+                            <point x="0.0875" y="0.49866" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="lata3" sid="565096330500425">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="246736705690627">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="864465278540073" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501341" original-source="C:\Users\Dv4  5164\Desktop\construct\PROYECTO-RECICLAJE\lata3_preview.png">
+                        <collision-poly>
+                            <point x="0.18" y="0.193029" />
+                            <point x="0.5" y="0.112601" />
+                            <point x="0.85" y="0.160858" />
+                            <point x="0.805" y="0.49866" />
+                            <point x="0.8475" y="0.836461" />
+                            <point x="0.5" y="0.951743" />
+                            <point x="0.1725" y="0.815013" />
+                            <point x="0.1925" y="0.49866" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="escultura1" sid="131798940681051">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Flash" sid="421539859576722">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="718483964954900" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="escultura2" sid="936940154213952">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Flash" sid="229580330504188">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="663988736210634" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="escultura3" sid="884129107236608">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Flash" sid="970492156328791">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="525425686054795" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Layout 1.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="3" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
