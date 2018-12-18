@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <variable constant="0" name="score" sid="269239529203775" static="0" type="number">0</variable>
         <event-group description="" sid="231552286771115" title="teclado">
             <sub-events>
                 <event-block sid="902545577012155">
@@ -34,11 +35,6 @@
                             <param id="0" name="Animation">&quot;derecha&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="0" name="Spawn another object" sid="710947830200893" type="Pinguino">
-                            <param id="0" name="Object">lata1</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="Image point">&quot;tirar&quot;</param>
-                        </action>
                         <action id="-10" name="Set value" sid="542509962505576" type="Pinguino">
                             <param id="0" name="Instance variable">recarga</param>
                             <param id="1" name="Value">1</param>
@@ -47,6 +43,20 @@
                             <param id="0" name="Duration">0.5</param>
                             <param id="1" name="Type">0</param>
                             <param id="2" name="Tag">&quot;recarga&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="230474863631329">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="350694830372664" type="Pinguino">
+                            <param id="0" name="Animation">&quot;Derecha&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="710947830200893" type="Pinguino">
+                            <param id="0" name="Object">lata1</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">&quot;Lanza_D&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -66,22 +76,31 @@
                             <param id="0" name="Animation">&quot;izquierda&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="0" name="Spawn another object" sid="471211725999317" type="Pinguino">
+                        <action id="-10" name="Set value" sid="717561877090500" type="Pinguino">
+                            <param id="0" name="Instance variable">recarga</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="621267262821487" type="Pinguino">
+                            <param id="0" name="Duration">0.5</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;recarga&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="714486203190912">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="394222305889403" type="Pinguino">
+                            <param id="0" name="Animation">&quot;Izquierda&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="283293908231445" type="Pinguino">
                             <param id="0" name="Object">lata2</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="Image point">&quot;tirar&quot;</param>
                         </action>
                         <action behavior="Bullet" id="0" name="Set speed" sid="115084728503662" type="lata2">
                             <param id="0" name="Speed">-400</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="518832401899551" type="Pinguino">
-                            <param id="0" name="Instance variable">recarga</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action behavior="Timer" id="0" name="Start timer" sid="891049284632801" type="Pinguino">
-                            <param id="0" name="Duration">0.5</param>
-                            <param id="1" name="Type">0</param>
-                            <param id="2" name="Tag">&quot;recarga&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -101,6 +120,15 @@
                             <param id="0" name="Animation">&quot;espaldas&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                    </actions>
+                </event-block>
+                <event-block sid="396900801611800">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="819956365610657" type="Pinguino">
+                            <param id="0" name="Animation">&quot;espaldas&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
                         <action id="0" name="Spawn another object" sid="570867487393628" type="Pinguino">
                             <param id="0" name="Object">lata3</param>
                             <param id="1" name="Layer">0</param>
@@ -130,6 +158,11 @@
                         <condition id="0" name="On collision with another object" sid="365660448046842" type="lata1">
                             <param id="0" name="Object">escultura1</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="379174106750192" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action behavior="Flash" id="0" name="Flash" sid="100932802570041" type="escultura1">
@@ -142,16 +175,29 @@
                             <param id="0" name="Animation">&quot;idle&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="-10" name="Add to" sid="791660029107341" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="563225809800580" type="escultura1">
+                            <param id="0" name="Instance variable">L_contador</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="217638165552248">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="489929118882861" type="lata2">
+                        <condition id="0" name="On collision with another object" sid="346105261855082" type="lata2">
                             <param id="0" name="Object">escultura2</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="820453124795434" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Flash" id="0" name="Flash" sid="555978345746977" type="escultura2">
+                        <action behavior="Flash" id="0" name="Flash" sid="470604564761062" type="escultura2">
                             <param id="0" name="&apos;On&apos; time">0.1</param>
                             <param id="1" name="&apos;Off&apos; time">0.1</param>
                             <param id="2" name="Duration">0.5</param>
@@ -161,12 +207,25 @@
                             <param id="0" name="Animation">&quot;idle&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="-10" name="Add to" sid="417824141405594" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="202701443507606" type="escultura2">
+                            <param id="0" name="Instance variable">M_contador</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="627654224274631">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="518247586173852" type="lata3">
                             <param id="0" name="Object">escultura3</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="914496617400349" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -175,10 +234,22 @@
                             <param id="1" name="&apos;Off&apos; time">0.1</param>
                             <param id="2" name="Duration">0.5</param>
                         </action>
+                        <action id="4" name="Set animation" sid="709168790329488" type="escultura3">
+                            <param id="0" name="Animation">&quot;E_crece1&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                         <action id="-9" name="Destroy" sid="365465639490638" type="lata3" />
                         <action id="4" name="Set animation" sid="356630568790178" type="Pinguino">
                             <param id="0" name="Animation">&quot;idle&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="299814324409625" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="699207560232478" type="escultura3">
+                            <param id="0" name="Instance variable">E_contador</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -194,6 +265,565 @@
                 <action id="-10" name="Set value" sid="550766930954931" type="Pinguino">
                     <param id="0" name="Instance variable">recarga</param>
                     <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="654696616544149">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="281033224898342" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="929409664172642" type="Audio">
+                    <param id="0" name="Audio file">muestra_beat_pinguino_proyecto_reciclaje</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;musica&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="155543056693816">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="851855224438399" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="767953496375805" type="puntuacion">
+                    <param id="0" name="Text">&quot;Score: &quot; &amp;  str(score)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="910000523729242" title="Libertad">
+            <sub-events>
+                <event-block sid="721674226930240">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="173691825080643" type="escultura1">
+                            <param id="0" name="Instance variable">L_contador</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="950536263755944" type="escultura1">
+                            <param id="0" name="Animation">&quot;L_crece1&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="922621539403157">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="206556381262480" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="762196467979778">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="745318045641183" type="escultura1">
+                                    <param id="0" name="Instance variable">L_contador</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="186019439143800" type="escultura1">
+                                    <param id="0" name="Animation">&quot;L_crece2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="769894851877696">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="375242548987955" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="166335927101168">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="250061551479200" type="escultura1">
+                                            <param id="0" name="Instance variable">L_contador</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">9</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="682611308822098" type="escultura1">
+                                            <param id="0" name="Animation">&quot;L_crece3&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="519339399934782">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="425732156202971" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="654957740560107">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="194854509801998" type="escultura1">
+                                                    <param id="0" name="Instance variable">L_contador</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">12</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="141722676347012" type="escultura1">
+                                                    <param id="0" name="Animation">&quot;L_crece4&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="372988852644531">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="325534444643768" type="System" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="511014666247311">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="901971797679085" type="escultura1">
+                                                            <param id="0" name="Instance variable">L_contador</param>
+                                                            <param id="1" name="Comparison">2</param>
+                                                            <param id="2" name="Value">15</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="590341500330333" type="escultura1">
+                                                            <param id="0" name="Animation">&quot;L_crece5&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="919096019398295">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="968553775201355" type="System" />
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="269002648999557">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="374702429049361" type="escultura1">
+                                                                    <param id="0" name="Instance variable">L_contador</param>
+                                                                    <param id="1" name="Comparison">2</param>
+                                                                    <param id="2" name="Value">18</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="550536639452339" type="escultura1">
+                                                                    <param id="0" name="Animation">&quot;L_crece6&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="243703502434739">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="656210197610553" type="System" />
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="812030010769207">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="713363893467580" type="escultura1">
+                                                                            <param id="0" name="Instance variable">L_contador</param>
+                                                                            <param id="1" name="Comparison">2</param>
+                                                                            <param id="2" name="Value">21</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="4" name="Set animation" sid="493418259874746" type="escultura1">
+                                                                            <param id="0" name="Animation">&quot;L_crece7&quot;</param>
+                                                                            <param id="1" name="From">1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="566215506319741">
+                                                                    <conditions>
+                                                                        <condition id="-22" name="Else" sid="692847081820847" type="System" />
+                                                                    </conditions>
+                                                                    <actions />
+                                                                    <sub-events>
+                                                                        <event-block sid="618792973848531">
+                                                                            <conditions />
+                                                                            <actions>
+                                                                                <action id="4" name="Set animation" sid="965634761830150" type="escultura1">
+                                                                                    <param id="0" name="Animation">&quot;Libertad&quot;</param>
+                                                                                    <param id="1" name="From">1</param>
+                                                                                </action>
+                                                                                <action behavior="Flash" id="1" name="Stop flashing" sid="454057665010263" type="escultura1" />
+                                                                            </actions>
+                                                                        </event-block>
+                                                                    </sub-events>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="505578018598569" title="Esfinge">
+            <sub-events>
+                <event-block sid="302274798954016">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="942908722778191" type="escultura3">
+                            <param id="0" name="Instance variable">E_contador</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="452669230749621" type="escultura3">
+                            <param id="0" name="Animation">&quot;E_crece1&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="466494826336619">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="967785762292857" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="881385970049395">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="764637279434855" type="escultura3">
+                                    <param id="0" name="Instance variable">E_contador</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="905439540829925" type="escultura3">
+                                    <param id="0" name="Animation">&quot;E_crece2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="339510522834043">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="249752776993049" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="420592361670313">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="647730183251441" type="escultura3">
+                                            <param id="0" name="Instance variable">E_contador</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">9</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="685046373862758" type="escultura3">
+                                            <param id="0" name="Animation">&quot;E_crece3&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="116314974630503">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="986175101852983" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="569901153703396">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="279778478096636" type="escultura3">
+                                                    <param id="0" name="Instance variable">E_contador</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">12</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="463842059684528" type="escultura3">
+                                                    <param id="0" name="Animation">&quot;E_crece4&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="272784071912850">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="682700958189028" type="System" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="717162435605632">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="878927361946203" type="escultura3">
+                                                            <param id="0" name="Instance variable">E_contador</param>
+                                                            <param id="1" name="Comparison">2</param>
+                                                            <param id="2" name="Value">15</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="762045612391559" type="escultura3">
+                                                            <param id="0" name="Animation">&quot;E_crece5&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="995772657104871">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="648685746525603" type="System" />
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="799642887327690">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="153407543253738" type="escultura3">
+                                                                    <param id="0" name="Instance variable">E_contador</param>
+                                                                    <param id="1" name="Comparison">2</param>
+                                                                    <param id="2" name="Value">18</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="269798395402767" type="escultura3">
+                                                                    <param id="0" name="Animation">&quot;E_crece6&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="480626356299661">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="502057067562733" type="System" />
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="482807367224470">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="471590287668656" type="escultura3">
+                                                                            <param id="0" name="Instance variable">E_contador</param>
+                                                                            <param id="1" name="Comparison">2</param>
+                                                                            <param id="2" name="Value">21</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="4" name="Set animation" sid="462615859365686" type="escultura3">
+                                                                            <param id="0" name="Animation">&quot;E_crece7&quot;</param>
+                                                                            <param id="1" name="From">1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="529390054757469">
+                                                                    <conditions>
+                                                                        <condition id="-22" name="Else" sid="250350855417213" type="System" />
+                                                                    </conditions>
+                                                                    <actions />
+                                                                    <sub-events>
+                                                                        <event-block sid="756285216043434">
+                                                                            <conditions />
+                                                                            <actions>
+                                                                                <action id="4" name="Set animation" sid="664198539689744" type="escultura3">
+                                                                                    <param id="0" name="Animation">&quot;Esfinge&quot;</param>
+                                                                                    <param id="1" name="From">1</param>
+                                                                                </action>
+                                                                                <action behavior="Flash" id="1" name="Stop flashing" sid="193995881142464" type="escultura3" />
+                                                                            </actions>
+                                                                        </event-block>
+                                                                    </sub-events>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="833495289099584" title="Moai">
+            <sub-events>
+                <event-block sid="975735655315068">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="256835366483137" type="escultura2">
+                            <param id="0" name="Instance variable">M_contador</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="201927466262859" type="escultura2">
+                            <param id="0" name="Animation">&quot;M_crece1&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="857656465815337">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="832982340241701" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="765965139205755">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="290819276714145" type="escultura2">
+                                    <param id="0" name="Instance variable">M_contador</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="173124784528642" type="escultura2">
+                                    <param id="0" name="Animation">&quot;M_crece2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="524923116037711">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="850576431450680" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="826674450408891">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="177697397821470" type="escultura2">
+                                            <param id="0" name="Instance variable">M_contador</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">9</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="170290458617107" type="escultura2">
+                                            <param id="0" name="Animation">&quot;M_crece3&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="684118112652492">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="352624009943747" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="304437452963428">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="934994189414757" type="escultura2">
+                                                    <param id="0" name="Instance variable">M_contador</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">12</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="775177897958878" type="escultura2">
+                                                    <param id="0" name="Animation">&quot;M_crece4&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="723488458274708">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="237837097798263" type="System" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="580152810442464">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="211730727592355" type="escultura2">
+                                                            <param id="0" name="Instance variable">M_contador</param>
+                                                            <param id="1" name="Comparison">2</param>
+                                                            <param id="2" name="Value">15</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="348017985587445" type="escultura2">
+                                                            <param id="0" name="Animation">&quot;M_crece5&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="946416080277551">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="124563840506082" type="System" />
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="558230322454782">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="995481815118729" type="escultura2">
+                                                                    <param id="0" name="Instance variable">M_contador</param>
+                                                                    <param id="1" name="Comparison">2</param>
+                                                                    <param id="2" name="Value">18</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="277779696339774" type="escultura2">
+                                                                    <param id="0" name="Animation">&quot;M_crece6&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="430875900116692">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="258776141426972" type="System" />
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="341556305802449">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="613811951177379" type="escultura2">
+                                                                            <param id="0" name="Instance variable">M_contador</param>
+                                                                            <param id="1" name="Comparison">2</param>
+                                                                            <param id="2" name="Value">21</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="4" name="Set animation" sid="817313523892276" type="escultura2">
+                                                                            <param id="0" name="Animation">&quot;M_crece7&quot;</param>
+                                                                            <param id="1" name="From">1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="762877727155292">
+                                                                    <conditions>
+                                                                        <condition id="-22" name="Else" sid="877406023976917" type="System" />
+                                                                    </conditions>
+                                                                    <actions />
+                                                                    <sub-events>
+                                                                        <event-block sid="289698538870341">
+                                                                            <conditions />
+                                                                            <actions>
+                                                                                <action id="4" name="Set animation" sid="675279726550574" type="escultura2">
+                                                                                    <param id="0" name="Animation">&quot;Moai&quot;</param>
+                                                                                    <param id="1" name="From">1</param>
+                                                                                </action>
+                                                                                <action behavior="Flash" id="1" name="Stop flashing" sid="819908756522764" type="escultura2" />
+                                                                            </actions>
+                                                                        </event-block>
+                                                                    </sub-events>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="832809306504045">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="396153687655392" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="248715090298642" type="Sprite2">
+                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
